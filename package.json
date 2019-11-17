@@ -1,0 +1,32 @@
+{
+  "name": "lint-release",
+  "version": "1.0.0",
+  "description": "Lint tool for compare version in git branch and package.json",
+  "main": "lib/lintRelease.js",
+  "repository": "git@github.com:samokat-oss/lint-release.git",
+  "author": "Igor Kamyshev <ikamyshev@smart.space>",
+  "license": "MIT",
+  "bin": {
+    "lint-release": "./bin/lint-release.js"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.1",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@solid-soda/scripts": "^1.14.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn soda lint-staged",
+      "pre-push": "yarn soda lint",
+      "commit-msg": "yarn soda commitlint"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "s": "yarn soda"
+  }
+}
