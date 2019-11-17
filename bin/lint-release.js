@@ -10,7 +10,7 @@ const execute = async () => {
   if (correct) {
     console.info(`Versions is OK`);
 
-    return process.exit(0);
+    process.exit(0);
   } else {
     console.error(
       'Package version does not match with the version in the git branch\n',
@@ -20,7 +20,7 @@ const execute = async () => {
     console.info(`Version in git branch: ${brachVersion}`);
 
     console.info('\nPlease, fix this issue 🤓');
-    return process.exit(1);
+    process.exit(1);
   }
 };
 
