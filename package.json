@@ -1,5 +1,5 @@
 {
-  "name": "lint-release",
+  "name": "@samokat/lint-release",
   "version": "1.0.0",
   "description": "Lint tool for compare version in git branch and package.json",
   "main": "lib/lintRelease.js",
