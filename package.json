@@ -28,6 +28,7 @@
     "access": "public"
   },
   "scripts": {
+    "ci": "yarn lint",
     "s": "yarn soda"
   }
 }

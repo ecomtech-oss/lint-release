@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+- '12'
+cache: yarn
+script: yarn ci
+deploy:
+  provider: npm
+  email: igor@kamyshev.me
+  api_key:
+    secure: CamX30fw18mT5y1nq/fqC8kwHyn1ZwJplT/8cZvh/eQstj1t87sm6AzOgk5Uf+6b1vRnUh5ZX7BnXHnT+PqYWm5D6stfyDkcAdimynNnnkEeBd4YQZaMJrEOxh1Q+xm4m+q2K7FyCyqZQDmZXIesC6tS98OyjrdCKsAPz0RNtLIYeV/1tV93BB7uWRVFbZXv9Zd0fxMZgBLcpU4GJBMGyc52nTXVYdaB6obpTK8+CjEyrhdbebgweQa984UxECkMo4WjWcigAZwl5Xpm+m8o+tZ0AhqFGKvkaOOpk5vnwfC4n01eQ1IhZN+qN7r6jETK/VJhVrQ4MTbtdEMDHiBH0oZqDkAzfKJkVKo7J00L1vprLQC9pP/byVY/67bjjOjCpPyYg8/3uzEcv/FVB2KwAv4e9uBXiySCMUUetcmThOMtaU+PW8Hr3D67dEzXyjbEuSIaMcptr6OXF37nBzbNV8X/sWfnE6Zn5rCK3VkpmqYpW1IBf7TorQoco2aByDbIJY7EF4XfwAjF0S4km8M7kp2dYnXnGo/QW2kwfi5j4xB6sxvIMVFSrADyPAhX70TPNRxi6s+iAAy1SNY68r35u2DIISNo4Hy78VDHp5smLVWQFxqMBnawaVef6vxZr0C701lfTZJN3NufVWlAirhaj+/B1/cWHhjA6tm765qe8lg=
+  on:
+    tags: true
+    repo: samokat-oss/lint-release
