@@ -14,9 +14,9 @@ yarn lint-release
 
 ## What?
 
-We store application version in `package.json` file and [create separate git branch for every release](https://trunkbaseddevelopment.com). This tool enforce similar versions in two source.
+We store application version in `package.json` file and [create separate git branch for every release](https://trunkbaseddevelopment.com). This tool enforces using similar versions in both sources.
 
-It allows branches with names satisfying pattern `release/X.X.X` and strictly compare it with a version in `package.json`.
+It allows branches with names satisfying pattern `release/X.X.X` and strictly compares it with a version in `package.json`.
 
 ### Examples
 
@@ -26,6 +26,8 @@ It allows branches with names satisfying pattern `release/X.X.X` and strictly co
 |2.2.0               |development    |✅     |
 |1.0.0               |feature/tl-12  |✅     |
 |2.2.0               |release/2.2.0  |✅     |
+|3.1                 |release/3.1    |✅     |
+|3                   |release/3      |✅     |
 |2.2.0               |release/2.2.1  |🛑     |
 |1.0.0               |release/2.2.0  |🛑     |
 
