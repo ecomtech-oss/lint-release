@@ -8,6 +8,8 @@ const optionDefinitions = [{ name: 'branch', alias: 'b', type: String }];
 
 const args = commandLineArgs(optionDefinitions);
 
+console.log(args.branch);
+
 const execute = async () => {
   const { correct, packageVersion, brachVersion } = await lintRelease(
     process.cwd(),
