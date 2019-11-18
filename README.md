@@ -18,6 +18,17 @@ We store application version in `package.json` file and [create separate git bra
 
 In allows branches with names satisfying pattern `release/X.X.X` and strictly compare it with a version in `package.json`.
 
+### Examples
+
+|package.json version|branch name    |result |
+|:------------------ |:------------- |:-----:|
+|1.0.0               |master         |✅     |
+|2.2.0               |development    |✅     |
+|1.0.0               |feature/tl-12  |✅     |
+|2.2.0               |release/2.2.0  |✅     |
+|2.2.0               |release/2.2.1  |🛑     |
+|1.0.0               |release/2.2.0  |🛑     |
+
 ## How?
 
 You can use in tool on CI, or add git-hook for linting.
